@@ -87,4 +87,22 @@ class BookDetails
       end
     end
   end
+
+  def save_data_to_json(title, publisher, cover_state, publish_date, color)
+    @books << {
+        'title' => title,
+        'publisher' => publisher,
+        'cover_state' => cover_state,
+        'publish_date' => publish_date
+    }
+
+    @labels << {
+        'title' => title
+        'color' => color
+    }
+    File.write('./DATABASE/books.json', JSON.pretty_generate(@books))
+    File.write('./DATABASE/labels.json', JSON.pretty_generate(@labels))
+
+
+  end
 end
