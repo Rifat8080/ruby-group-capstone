@@ -7,6 +7,7 @@ class App
     @books = []
     @music_albums = []
     @genres = []
+    @games = []
   end
 
   def list_all_music_albums
@@ -25,5 +26,9 @@ class App
     puts 'List of all genres:'
     genre_names = @genres.map { |genre| "'#{genre['name'].capitalize}'" }
     puts genre_names.join(', ')
+  end
+
+  def list_of_games
+    if @games
   end
 end
