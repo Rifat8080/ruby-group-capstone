@@ -110,4 +110,11 @@ class BookDetails
   rescue JSON::ParseError => e
     puts "Error parsing books.json: #{e.message}"
   end
+
+  def load_labels
+    data_labels = JSON.parse(File.read('./DATABASE/labels.json'))
+    @labels = data_labels
+  rescue JSON::ParserError => e
+    puts "Error parsing labels.json: #{e.message}"
+  end
 end
