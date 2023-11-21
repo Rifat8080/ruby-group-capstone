@@ -12,4 +12,8 @@ class Book < Item
     @publish_date = publish_date
     @label = nil
   end
+
+  def can_be_archived?
+    super || @cover_state == 'bad'
+  end
 end
