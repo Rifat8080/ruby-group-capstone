@@ -1,4 +1,4 @@
-require_relative 'classes/music_albums'
+require_relative 'classes/music_album'
 
 class App
   attr_accessor :id, :books, :music_albums, :genres, :games, :labels, :authors, :book_details
@@ -94,5 +94,37 @@ class App
     store_to_array(data)
 
     puts 'Game Created Successfully'
+  end
+
+  def add_music_album
+    puts 'Enter the details of the music album:'
+    print 'Title: '
+    title = gets.chomp
+    print 'Artist: '
+    artist = gets.chomp
+    print 'Genre: '
+    genre = gets.chomp
+    print 'Release Year: '
+    release_year = gets.chomp.to_i
+
+    music_album_info = {
+      title: title,
+      artist: artist,
+      release_year: release_year,
+      on_spotify: true,
+      publish_date: Time.now.strftime('%Y-%m-%d'),
+      genre: genre,
+      archived: false
+    }
+
+    new_music_album = MusicAlbum.new(music_album_info)
+    @music_albums << new_music_album
+
+    puts 'Music album added successfully!'
+  end
+
+  def exit_app
+    puts 'Exiting the app. Goodbye!'
+    exit
   end
 end
