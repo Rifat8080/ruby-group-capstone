@@ -8,6 +8,8 @@ class App
     @music_albums = []
     @genres = []
     @games = []
+    @labels = []
+    @authors = []
   end
 
   def list_all_music_albums
@@ -29,6 +31,22 @@ class App
   end
 
   def list_of_games
-    if @games
+    if @games.empty?
+      puts 'Oops! No available games, select 9 to add new game'
+    else
+      @games.each_with_index do |game, index|
+        puts "#{index + 1}'#{game['game_name']}' by #{game['first_name']}"
+      end
+    end
+  end
+
+  def list_all_authors
+    if @authors.empty?
+      puts 'Oops there are no Authors!'
+    else
+      @authors.each do |author|
+        puts "'#{author['first_name']} #{author['last_name']}'"
+      end
+    end
   end
 end
