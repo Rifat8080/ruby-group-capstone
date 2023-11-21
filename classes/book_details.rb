@@ -36,4 +36,34 @@ class BookDetails
         puts 'Invalid choice. Please try again'
       end
     end
+
+  def add_a_book
+    puts ''
+    puts 'Enter book title: '
+    title = gets.chomp
+    
+    puts ''
+    puts 'Enter publisher: '
+    publisher = gets.chomp
+    
+    puts ''
+    puts 'Enter cover state (good/bad/average): '
+    cover_state = gets.chomp.downcase
+    
+    puts ''
+    puts 'Enter publish date (YYYY-MM-DD): '
+    publish_date = gets.chomp
+    
+    puts ''
+    puts 'Enter Label color '
+    color = gets.chomp.downcase
+    
+    book = Book.new(title, publisher, cover_state: cover_state, publish_date: publish_date)
+    label = Label.new(title, color)
+    label.add_item(book)
+    book.label = label
+    
+    save_data_to_json(title, publisher, cover_state, publish_date, color)
+    puts "Added #{book.title} to your catalog."
   end
+end
