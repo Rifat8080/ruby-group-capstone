@@ -102,7 +102,12 @@ class BookDetails
     }
     File.write('./DATABASE/books.json', JSON.pretty_generate(@books))
     File.write('./DATABASE/labels.json', JSON.pretty_generate(@labels))
+  end
 
-
+  def load_books
+    data_books = JSON.parse(File.read('./DATABASE/books.json'))
+    @books = data_books
+  rescue JSON::ParseError => e
+    puts "Error parsing books.json: #{e.message}"
   end
 end
