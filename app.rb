@@ -19,4 +19,11 @@ class App
       end
     end
   end
+
+  def list_all_genres
+    puts 'No genres added yet.' if @genre.empty?
+    puts 'List of all genres:'
+    genre_names = @genres.map { |genre| "'#{genre['name'].capitalize}'" }
+    puts genre_names.join(', ')
+  end
 end
