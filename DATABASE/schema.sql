@@ -27,3 +27,10 @@ CREATE TABLE Book (
   cover_state VARCHAR(255),
   FOREIGN KEY (item_id) REFERENCES Item(id)
 );
+
+-- Table: Label
+CREATE TABLE Label (
+  id INT PRIMARY KEY,
+  title VARCHAR(255),
+  color VARCHAR(255)
+);
