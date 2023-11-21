@@ -49,4 +49,50 @@ class App
       end
     end
   end
+
+  def add_a_game
+    print 'Enter game name: '
+    game_name = gets.chomp
+
+    print 'Enter author first_name: '
+    first_name = gets.chomp
+
+    print 'Enter author last_name: '
+    last_name = gets.chomp
+
+    print 'Enter the publish date [YYYY-MM-DD]: '
+    publish_date = gets.chomp
+
+    print 'Is it a multiplayer? [Y/N]: '
+    player = gets.chomp.downcase
+    multiplayer = true_or_false(player)
+
+    print 'It was last played at [YYYY-MM-DD]: '
+    last_played_at = gets.chomp
+
+    games_info = {
+      game_name: game_name,
+      first_name: first_name,
+      last_name: last_name,
+      publish_date: publish_date,
+      multiplayer: multiplayer,
+      last_played_at: last_played_at
+    }
+
+    Author.new(first_name, last_name)
+    GameDetails.new(games_info)
+
+    data = {
+      'game_name' => game_name,
+      'first_name' => first_name,
+      'last_name' => last_name,
+      'publish_date' => publish_date,
+      'multiplayer' => multiplayer,
+      'last_played_at' => last_played_at
+    }
+
+    store_to_array(data)
+
+    puts 'Game Created Successfully'
+  end
 end
