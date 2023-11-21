@@ -10,4 +10,19 @@ class Item
     @archived = archived
     @label = []
   end
+
+  private
+
+  def can_be_archived?
+    @today = Date.today
+    @date = Date.parse(@publish_date)
+    ((@today - @date) / 365).floor > 10
+  end
+
+  public
+
+  def move_to_archive
+    @archived = true if can_be_archived?
+    @archived
+  end
 end
