@@ -76,4 +76,15 @@ class BookDetails
       end
     end
   end
+
+  def list_labels
+    if @labels.empty?
+      puts 'You have no labels in your catalog.'
+    else
+      @labels.each do |label|
+        print "'#{label['title']}', '#{label['color']}'"
+        puts ''
+      end
+    end
+  end
 end
