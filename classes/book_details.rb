@@ -66,4 +66,14 @@ class BookDetails
     save_data_to_json(title, publisher, cover_state, publish_date, color)
     puts "Added #{book.title} to your catalog."
   end
+
+  def list_all_books
+    if @books.empty?
+      puts 'You have no books in your catalog.'
+    else
+      @books.each do |item|
+        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']}, publish date: #{item['publish_date']}"
+      end
+    end
+  end
 end
