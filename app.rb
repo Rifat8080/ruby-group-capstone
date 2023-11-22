@@ -9,7 +9,7 @@ require_relative 'classes/book_details'
 
 class App
   attr_accessor :id, :books, :music_albums, :genres, :games, :labels, :authors, :book_details
-
+  
   def initialize
     @books = []
     @music_albums = []
