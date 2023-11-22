@@ -74,7 +74,8 @@ class BookDetails
       puts 'You have no books in your catalog.'
     else
       @books.each do |item|
-        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']}, publish date: #{item['publish_date']}"
+        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']},
+        publish date: #{item['publish_date']}"
       end
     end
   end
