@@ -20,12 +20,23 @@ CREATE TABLE Item (
   FOREIGN KEY (label_id) REFERENCES Label(id)
 );
 
--- Table: Book
-CREATE TABLE Book (
-  item_id INT PRIMARY KEY,
-  publisher VARCHAR(255),
-  cover_state VARCHAR(255),
-  FOREIGN KEY (item_id) REFERENCES Item(id)
+-- Table: Genre
+CREATE TABLE Genre (
+  id INT PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+-- Table: Source
+CREATE TABLE Source (
+  id INT PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+-- Table: Author
+CREATE TABLE Author (
+  id INT PRIMARY KEY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255)
 );
 
 -- Table: Label
@@ -35,42 +46,42 @@ CREATE TABLE Label (
   color VARCHAR(255)
 );
 
-
--- Create the genres table
-CREATE TABLE IF NOT EXIST genres (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
+-- Table: Book
+CREATE TABLE Book (
+  item_id INT PRIMARY KEY,
+  publisher VARCHAR(255),
+  cover_state VARCHAR(255),
+  FOREIGN KEY (item_id) REFERENCES Item(id)
 );
 
--- Create the music_albums table
-CREATE TABLE IF NOT EXIST music_albums (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    artist VARCHAR(255) NOT NULL,
-    release_year INT NOT NULL,
-    on_spotify BOOLEAN NOT NULL,
-    genre_id INT,
-    FOREIGN KEY (genre_id) REFERENCES genres(id),
-    published_date DATE NOT NULL,
-    archived BOOLEAN NOT NULL
+-- Table: MusicAlbum
+CREATE TABLE MusicAlbum (
+  item_id INT PRIMARY KEY,
+  on_spotify BOOLEAN,
+  FOREIGN KEY (item_id) REFERENCES Item(id)
 );
 
---- Create games table
+-- Table: Movie
+CREATE TABLE Movie (
+  item_id INT PRIMARY KEY,
+  silent BOOLEAN,
+  FOREIGN KEY (item_id) REFERENCES Item(id)
+);
 
-CREATE TABLE games(
-  id INT,
-  publish_date DATE,
+-- Table: Game
+CREATE TABLE Game (
+  item_id INT PRIMARY KEY,
   multiplayer BOOLEAN,
   last_played_at DATE,
-  author_id INT REFERENCES authors(id)
-  PRIMARY KEY(id)
- );
+  FOREIGN KEY (item_id) REFERENCES Item(id)
+);
 
- ---Create authors table
-
- CREATE TABLE authors(
-  id INT,
-  first_name VARCHAR
-  last_name VARCHAR
-  PRIMARY KEY(id)
- );
+-- Create Indexes
+CREATE INDEX idx_item_genre_id ON Item (genre_id);
+CREATE INDEX idx_item_author_id ON Item (author_id);
+CREATE INDEX idx_item_source_id ON Item (source_id);
+CREATE INDEX idx_item_label_id ON Item (label_id);
+CREATE INDEX idx_book_item_id ON Book (item_id);
+CREATE INDEX idx_music_album_item_id ON MusicAlbum (item_id);
+CREATE INDEX idx_movie_item_id ON Movie (item_id);
+CREATE INDEX idx_game_item_id ON Game (item_id);
