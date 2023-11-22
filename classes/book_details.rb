@@ -1,6 +1,7 @@
 require_relative 'label'
 require_relative 'book'
 require_relative '../menu'
+require 'json'
 
 class BookDetails
   attr_accessor :books
@@ -36,6 +37,7 @@ class BookDetails
         puts 'Invalid choice. Please try again'
       end
     end
+  end
 
   def add_a_book
     puts ''
