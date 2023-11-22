@@ -34,3 +34,23 @@ CREATE TABLE Label (
   title VARCHAR(255),
   color VARCHAR(255)
 );
+
+--- Create games table
+
+CREATE TABLE games(
+  id INT,
+  publish_date DATE,
+  multiplayer BOOLEAN,
+  last_played_at DATE,
+  author_id INT REFERENCES authors(id)
+  PRIMARY KEY(id)
+ );
+
+ ---Create authors table
+
+ CREATE TABLE authors(
+  id INT,
+  first_name VARCHAR
+  last_name VARCHAR
+  PRIMARY KEY(id)
+ );
