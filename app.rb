@@ -234,14 +234,6 @@ class App
     exit
   end
 end
-require_relative 'menu'
-require_relative 'classes/music_album'
-require_relative 'classes/music_genre'
-require_relative 'classes/item'
-require_relative 'classes/game'
-require_relative 'classes/game_details'
-require_relative 'classes/author'
-require_relative 'classes/book_details'
 
 class App
   attr_accessor :id, :books, :music_albums, :genres, :games, :labels, :authors, :book_details

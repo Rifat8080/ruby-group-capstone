@@ -43,28 +43,28 @@ class BookDetails
     puts ''
     puts 'Enter book title: '
     title = gets.chomp
-    
+
     puts ''
     puts 'Enter publisher: '
     publisher = gets.chomp
-    
+
     puts ''
     puts 'Enter cover state (good/bad/average): '
     cover_state = gets.chomp.downcase
-    
+
     puts ''
     puts 'Enter publish date (YYYY-MM-DD): '
     publish_date = gets.chomp
-    
+
     puts ''
     puts 'Enter Label color '
     color = gets.chomp.downcase
-    
+
     book = Book.new(title, publisher, cover_state: cover_state, publish_date: publish_date)
     label = Label.new(title, color)
     label.add_item(book)
     book.label = label
-    
+
     save_data_to_json(title, publisher, cover_state, publish_date, color)
     puts "Added #{book.title} to your catalog."
   end
@@ -74,7 +74,8 @@ class BookDetails
       puts 'You have no books in your catalog.'
     else
       @books.each do |item|
-        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']}, publish date: #{item['publish_date']}"
+        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']},
+        publish date: #{item['publish_date']}"
       end
     end
   end
@@ -92,15 +93,15 @@ class BookDetails
 
   def save_data_to_json(title, publisher, cover_state, publish_date, color)
     @books << {
-        'title' => title,
-        'publisher' => publisher,
-        'cover_state' => cover_state,
-        'publish_date' => publish_date
+      'title' => title,
+      'publisher' => publisher,
+      'cover_state' => cover_state,
+      'publish_date' => publish_date
     }
 
     @labels << {
-        'title' => title,
-        'color' => color
+      'title' => title,
+      'color' => color
     }
     File.write('./DATABASE/books.json', JSON.pretty_generate(@books))
     File.write('./DATABASE/labels.json', JSON.pretty_generate(@labels))
