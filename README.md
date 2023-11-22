@@ -1,3 +1,5 @@
+[UML Class Diagram](./catalog_of_my_things.png)
+
 <a name="readme-top"></a>
 
 <div align="center">
