@@ -6,6 +6,8 @@ class Label
     @id = rand(0...1000)
     @title = title
     @color = color
+    @items = []
+    @item = nil
   end
 
   def add_item(item)

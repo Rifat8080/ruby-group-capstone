@@ -5,8 +5,8 @@ require 'json'
 class Book < Item
   attr_accessor :publisher, :cover_state, :publish_date, :label, :title
 
-  def initiatlize(title, publisher, cover_state: 'good', published_date: nil, archived: false)
-    super(published_date, archived: archived)
+  def initialize(title, publisher, cover_state: 'good', publish_date: nil, archived: false)
+    super(publish_date, archived: archived)
     @id = rand(0...1000)
     @title = title
     @publisher = publisher
