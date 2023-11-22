@@ -6,7 +6,7 @@ require 'json'
 class BookDetails
   attr_accessor :books
 
-  def inititalize
+  def initialize
     @books = []
     @labels = []
     load_books
@@ -34,7 +34,7 @@ class BookDetails
       when 4
         break
       else
-        puts 'Invalid choice. Please try again'
+        puts 'Invalid choice. Please try again.'
       end
     end
   end
@@ -74,8 +74,7 @@ class BookDetails
       puts 'You have no books in your catalog.'
     else
       @books.each do |item|
-        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']},
-        publish date: #{item['publish_date']}"
+        puts "publisher: #{item['publisher']}, cover state: #{item['cover_state']}, publish date: #{item['publish_date']}"
       end
     end
   end
@@ -91,12 +90,15 @@ class BookDetails
     end
   end
 
+  private
+
   def save_data_to_json(title, publisher, cover_state, publish_date, color)
     @books << {
       'title' => title,
       'publisher' => publisher,
       'cover_state' => cover_state,
       'publish_date' => publish_date
+
     }
 
     @labels << {
@@ -110,7 +112,7 @@ class BookDetails
   def load_books
     data_books = JSON.parse(File.read('./DATABASE/books.json'))
     @books = data_books
-  rescue JSON::ParseError => e
+  rescue JSON::ParserError => e
     puts "Error parsing books.json: #{e.message}"
   end
 
