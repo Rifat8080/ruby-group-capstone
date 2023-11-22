@@ -97,7 +97,7 @@ class BookDetails
     }
 
     @labels << {
-        'title' => title
+        'title' => title,
         'color' => color
     }
     File.write('./DATABASE/books.json', JSON.pretty_generate(@books))
