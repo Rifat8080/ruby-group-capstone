@@ -1,4 +1,6 @@
-require_relative 'classes/music_albums'
+require_relative 'classes/music_album'
+require_relative 'classes/music_genre'
+require_relative 'classes/item'
 
 class App
   attr_accessor :id, :books, :music_albums, :genres, :games, :labels, :authors, :book_details
@@ -10,6 +12,8 @@ class App
     @games = []
     @labels = []
     @authors = []
+    load_music_albums
+    load_genres
   end
 
   def list_all_music_albums
@@ -94,5 +98,71 @@ class App
     store_to_array(data)
 
     puts 'Game Created Successfully'
+  end
+
+  def add_music_album
+    puts 'Enter the details of the music album:'
+    print 'Title: '
+    title = gets.chomp
+    print 'Artist: '
+    artist = gets.chomp
+    print 'Genre: '
+    genre_name = gets.chomp
+    print 'Release Year: '
+    release_year = gets.chomp.to_i
+
+    music_album_info = {
+      title: title,
+      artist: artist,
+      release_year: release_year,
+      on_spotify: true,
+      publish_date: Time.now.strftime('%Y-%m-%d'),
+      genre: genre_name,
+      archived: false
+    }
+    Genre.new(genre_name)
+
+    MusicAlbum.new(music_album_info)
+
+    save_music_albums(title, artist, genre_name, release_year)
+    save_genres(genre_name)
+
+    puts 'Music album added successfully!'
+  end
+
+  def load_music_albums
+    music_album_data = JSON.parse(File.read('./DATABASE/music_albums.json'))
+    @music_albums = music_album_data
+  rescue JSON::ParserError => e
+    puts "Error parsing music_albums.json: #{e.message}"
+  end
+
+  def save_music_albums(title, artist, genre_name, release_year)
+    @music_albums << {
+      'title' => title,
+      'artist' => artist,
+      'genre' => genre_name,
+      'release_year' => release_year
+    }
+    File.write('./DATABASE/music_albums.json', JSON.pretty_generate(@music_albums))
+  end
+
+  def load_genres
+    genre_data = JSON.parse(File.read('./DATABASE/genres.json'))
+    @genres = genre_data
+  rescue JSON::ParserError => e
+    puts "Error parsing genres.json: #{e.message}"
+  end
+
+  def save_genres(genre_name)
+    @genres << {
+      'name' => genre_name
+    }
+    File.write('./DATABASE/genres.json', JSON.pretty_generate(@genres))
+  end
+
+  def exit_app
+    puts 'Exiting the app. Goodbye!'
+    exit
   end
 end
