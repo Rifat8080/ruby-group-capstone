@@ -1,6 +1,6 @@
 require_relative 'item'
 class MusicAlbum < Item
-   attr_accessor :id, :title, :artist, :release_year, :on_spotify, :genre
+  attr_accessor :id, :title, :artist, :release_year, :on_spotify, :genre
 
   def initialize(params)
     super(params[:publish_date], archived: params[:archived])
