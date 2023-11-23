@@ -4,5 +4,11 @@
     "artist": "Eric",
     "genre": "Rock",
     "release_year": 2022
+  },
+  {
+    "title": "Umusa",
+    "artist": "Lebo",
+    "genre": "Gospel",
+    "release_year": 2022
   }
 ]
