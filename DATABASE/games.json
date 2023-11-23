@@ -22,5 +22,13 @@
     "publish_date": "2023-11-23",
     "multiplayer": true,
     "last_played_at": "2023-11-23"
+  },
+  {
+    "game_name": "FIFA 2023",
+    "first_name": "EA Sport",
+    "last_name": "EA Sport",
+    "publish_date": "2023-07-01",
+    "multiplayer": true,
+    "last_played_at": "2023-11-23"
   }
 ]

@@ -16,5 +16,11 @@
     "artist": "Jazz Masters",
     "genre": "Fusion of Jazz",
     "release_year": 2023
+  },
+  {
+    "title": "Gospel according to jazz",
+    "artist": "Kirk Franklin",
+    "genre": "Gospel",
+    "release_year": 2023
   }
 ]

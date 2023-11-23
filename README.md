@@ -59,7 +59,7 @@ In this project, we created a console app that will help you to keep a record of
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Presentation Video <a name="video"></a>
-[Video]()
+[Video](https://drive.google.com/file/d/1Elhkw1IUJtwQap-UoMcN51a3wDONHDVF/view?usp=sharing)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->

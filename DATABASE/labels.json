@@ -10,5 +10,9 @@
   {
     "title": "Ruby 101",
     "color": "yellow"
+  },
+  {
+    "title": "JS",
+    "color": "blue"
   }
 ]
