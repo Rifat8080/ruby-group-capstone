@@ -30,7 +30,7 @@ class App
     else
       puts 'List of all music albums:'
       @music_albums.each do |album|
-        puts "#{album['title']} by #{album['artist']},\nGenre: #{album['genre']}, Released: #{album['release_year']}"
+        puts "#{album['title']} by #{album['artist']}, Genre: #{album['genre']}, Released: #{album['release_year']}"
       end
     end
   end
@@ -122,7 +122,7 @@ class App
       puts 'Oops! No available games, select 9 to add new game'
     else
       @games.each_with_index do |game, index|
-        puts "#{index + 1} '#{game['game_name']}' by #{game['first_name']}"
+        puts "#{index + 1} Title: #{game['game_name']} by #{game['first_name']}"
       end
     end
   end
@@ -132,7 +132,7 @@ class App
       puts 'oops there are no authors'
     else
       @authors.each do |author|
-        puts "'#{author['first_name']} #{author['last_name']}'"
+        puts "First Name: #{author['first_name']}, Last Name: #{author['last_name']}"
       end
     end
   end

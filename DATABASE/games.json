@@ -14,5 +14,13 @@
     "publish_date": "2023-10-01",
     "multiplayer": true,
     "last_played_at": "2023-11-23"
+  },
+  {
+    "game_name": "Superman",
+    "first_name": "EA Sport",
+    "last_name": "EA Sports",
+    "publish_date": "2023-11-23",
+    "multiplayer": true,
+    "last_played_at": "2023-11-23"
   }
 ]
