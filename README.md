@@ -114,6 +114,11 @@ it will install the required gemfile for running the project
 - Twitter: [@mdmahadirifat98](https://twitter.com/mdmahadirifat98)
 - LinkedIn: [md-mahadi-hasan-rifat-8b7851265](https://www.linkedin.com/in/md-mahadi-hasan-rifat-8b7851265/)
 
+👤 **Eric Delali Mawudeku**
+
+- GitHub: [@erickma1]()https://github.com/erickma1
+- LinkedIn: [eric-mawudeku-55b74883](https://www.linkedin.com/in/eric-mawudeku-55b74883/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
