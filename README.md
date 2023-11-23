@@ -93,6 +93,13 @@ Install this project with:
   cd ruby-group-capston
   bundle install
 ```
+### Usage
+
+To run the project, execute the following command:
+run the result on the terminal through:
+```sh
+  ruby main.rb
+```
 
 it will install the required gemfile for running the project
 
