@@ -87,12 +87,14 @@ Clone this repository to your desired folder by running the following commands i
 
 ### Install
 
-Install this project with:
+Install this project with: 
 
 ```bash
-  cd ruby-group-capston
+  cd ruby-group-capstone
   bundle install
 ```
+it will install the required gemfile for running the project
+
 ### Usage
 
 To run the project, execute the following command:
@@ -100,8 +102,6 @@ run the result on the terminal through:
 ```sh
   ruby main.rb
 ```
-
-it will install the required gemfile for running the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

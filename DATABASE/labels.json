@@ -14,5 +14,9 @@
   {
     "title": "JS",
     "color": "blue"
+  },
+  {
+    "title": "Ruby",
+    "color": "yellow"
   }
 ]
