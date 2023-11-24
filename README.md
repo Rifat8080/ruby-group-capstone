@@ -33,8 +33,8 @@
 
 # 📖 CATALOGUE OF MY THINGS <a name="about-project"></a>
 
-**CATALOGUE OF MY THINGS** 
-In this project, we created a console app that will help you to keep a record of different types of things you own: books, music albums, and games. Everything will be based on the UML class diagram. The data will be stored in JSON files but we also prepared a database with tables structure analogical to our program's class structure. 
+**CATALOGUE OF MY THINGS**
+In this project, we created a console app that will help you to keep a record of different types of things you own: books, music albums, and games. Everything will be based on the UML class diagram. The data will be stored in JSON files but we also prepared a database with tables structure analogical to our program's class structure.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -59,7 +59,9 @@ In this project, we created a console app that will help you to keep a record of
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Presentation Video <a name="video"></a>
-[Video](https://drive.google.com/file/d/1Elhkw1IUJtwQap-UoMcN51a3wDONHDVF/view?usp=sharing)
+
+[Video](https://drive.google.com/file/d/1hEatKz44hBINEHFYyYR8D1SFKBILKV-L/view?usp=sharing)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -87,18 +89,20 @@ Clone this repository to your desired folder by running the following commands i
 
 ### Install
 
-Install this project with: 
+Install this project with:
 
 ```bash
   cd ruby-group-capstone
   bundle install
 ```
+
 it will install the required gemfile for running the project
 
 ### Usage
 
 To run the project, execute the following command:
 run the result on the terminal through:
+
 ```sh
   ruby main.rb
 ```
