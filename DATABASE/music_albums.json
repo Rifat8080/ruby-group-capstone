@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Gospel",
+    "artist": "Eric",
+    "genre": "Rock",
+    "release_year": 2022
+  },
+  {
+    "title": "Umusa",
+    "artist": "Lebo",
+    "genre": "Gospel",
+    "release_year": 2022
+  },
+  {
+    "title": "Jazz",
+    "artist": "Jazz Masters",
+    "genre": "Fusion of Jazz",
+    "release_year": 2023
+  },
+  {
+    "title": "Gospel according to jazz",
+    "artist": "Kirk Franklin",
+    "genre": "Gospel",
+    "release_year": 2023
+  }
+]

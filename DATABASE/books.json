@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Titans",
+    "publisher": "Eric",
+    "cover_state": "good",
+    "publish_date": "2023-06-19"
+  },
+  {
+    "title": "Born a Crime",
+    "publisher": "Microverse",
+    "cover_state": "good",
+    "publish_date": "2023-11-23"
+  },
+  {
+    "title": "Ruby 101",
+    "publisher": "Odin Projects",
+    "cover_state": "good",
+    "publish_date": "2023-10-11"
+  },
+  {
+    "title": "JS",
+    "publisher": "JS masters",
+    "cover_state": "good",
+    "publish_date": "2023-10-11"
+  },
+  {
+    "title": "Ruby",
+    "publisher": "Microverse",
+    "cover_state": "goog",
+    "publish_date": "2023-11-23"
+  }
+]
